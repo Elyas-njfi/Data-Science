@@ -1,0 +1,270 @@
+[
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "customtkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "customtkinter",
+        "description": "customtkinter",
+        "detail": "customtkinter",
+        "documentation": {}
+    },
+    {
+        "label": "randint",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "exit",
+        "importPath": "sys",
+        "description": "sys",
+        "isExtraImport": true,
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "guessNumber",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def guessNumber():\n    global DISABLE_ENTER\n    global COUNTER\n    global number\n    entry = root.te.get()\n    if(entry):\n        if entry.isdigit():\n            user_guess = int(entry)\n            if(MIN_NUMBER <= user_guess <= MAX_NUMBER):\n                root.msg = customtkinter.StringVar()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "set_farsi_font_title",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def set_farsi_font_title(widget):\n    font_name = \"calibri\"  \n    font_size = 36\n    font_weight = \"bold\"\n    widget.configure(font=(font_name, font_size, font_weight))\ndef set_farsi_font_text(widget):\n    font_name = \"calibri\"  \n    font_size = 18\n    font_weight = \"bold\"\n    widget.configure(font=(font_name, font_size, font_weight))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "set_farsi_font_text",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def set_farsi_font_text(widget):\n    font_name = \"calibri\"  \n    font_size = 18\n    font_weight = \"bold\"\n    widget.configure(font=(font_name, font_size, font_weight))\ndef again():\n    global COUNTER\n    global DISABLE_ENTER\n    COUNTER = 0\n    DISABLE_ENTER = 0",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "again",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def again():\n    global COUNTER\n    global DISABLE_ENTER\n    COUNTER = 0\n    DISABLE_ENTER = 0\n    root.main_button_1.configure(state=tkinter.NORMAL)\n    root.te.delete(0, tkinter.END)\n    root.user_guess_lable.set('Please Enter a Number Between 1 and 100')\n    root.msg.set('')\n    root.alert.set('')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "generageNumber",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def generageNumber():\n    global number\n    number = randint(MIN_NUMBER, MAX_NUMBER)\n    # print(number)\ndef changeMaxTry(new_max_try: str):\n    global MAX_TRY\n    MAX_TRY = int(new_max_try)\n    # print(MAX_TRY)\ndef on_enter_pressed(event):\n    if DISABLE_ENTER == 0:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "changeMaxTry",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def changeMaxTry(new_max_try: str):\n    global MAX_TRY\n    MAX_TRY = int(new_max_try)\n    # print(MAX_TRY)\ndef on_enter_pressed(event):\n    if DISABLE_ENTER == 0:\n        guessNumber()\ngenerageNumber()\ncustomtkinter.set_appearance_mode('dark')\ncustomtkinter.set_default_color_theme('green')",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "on_enter_pressed",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def on_enter_pressed(event):\n    if DISABLE_ENTER == 0:\n        guessNumber()\ngenerageNumber()\ncustomtkinter.set_appearance_mode('dark')\ncustomtkinter.set_default_color_theme('green')\nroot = customtkinter.CTk()\nroot.geometry('950x550')\nroot.title('Guess Number Game')\nroot.grid_columnconfigure(1, weight=1)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "MIN_NUMBER",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "MIN_NUMBER = 1\nMAX_NUMBER = 100\nMAX_TRY = 5\nCOUNTER = 0\nDISABLE_ENTER = 0\ndef guessNumber():\n    global DISABLE_ENTER\n    global COUNTER\n    global number\n    entry = root.te.get()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_NUMBER",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "MAX_NUMBER = 100\nMAX_TRY = 5\nCOUNTER = 0\nDISABLE_ENTER = 0\ndef guessNumber():\n    global DISABLE_ENTER\n    global COUNTER\n    global number\n    entry = root.te.get()\n    if(entry):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_TRY",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "MAX_TRY = 5\nCOUNTER = 0\nDISABLE_ENTER = 0\ndef guessNumber():\n    global DISABLE_ENTER\n    global COUNTER\n    global number\n    entry = root.te.get()\n    if(entry):\n        if entry.isdigit():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "COUNTER",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "COUNTER = 0\nDISABLE_ENTER = 0\ndef guessNumber():\n    global DISABLE_ENTER\n    global COUNTER\n    global number\n    entry = root.te.get()\n    if(entry):\n        if entry.isdigit():\n            user_guess = int(entry)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "DISABLE_ENTER",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "DISABLE_ENTER = 0\ndef guessNumber():\n    global DISABLE_ENTER\n    global COUNTER\n    global number\n    entry = root.te.get()\n    if(entry):\n        if entry.isdigit():\n            user_guess = int(entry)\n            if(MIN_NUMBER <= user_guess <= MAX_NUMBER):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root = customtkinter.CTk()\nroot.geometry('950x550')\nroot.title('Guess Number Game')\nroot.grid_columnconfigure(1, weight=1)\nroot.grid_columnconfigure((2, 3), weight=1)\nroot.grid_rowconfigure((0, 1, 2), weight=1)\nroot.sidebar_frame = customtkinter.CTkFrame(root, width=140, corner_radius=0)\nroot.sidebar_frame.grid(row=0, column=0, rowspan=4, sticky=\"nsew\")\nroot.sidebar_frame.grid_rowconfigure(4, weight=1)\nroot.logo_label = customtkinter.CTkLabel(root.sidebar_frame, text=\"Guess Number Game\", font=customtkinter.CTkFont(size=20, weight=\"bold\"))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.sidebar_frame",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.sidebar_frame = customtkinter.CTkFrame(root, width=140, corner_radius=0)\nroot.sidebar_frame.grid(row=0, column=0, rowspan=4, sticky=\"nsew\")\nroot.sidebar_frame.grid_rowconfigure(4, weight=1)\nroot.logo_label = customtkinter.CTkLabel(root.sidebar_frame, text=\"Guess Number Game\", font=customtkinter.CTkFont(size=20, weight=\"bold\"))\nset_farsi_font_title(root.logo_label)\nroot.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))\nroot.logo_label = customtkinter.CTkLabel(root.sidebar_frame, text=\"Game By: Elyas Najafi\", font=customtkinter.CTkFont(size=2))\nset_farsi_font_title(root.logo_label)\nroot.logo_label.grid(row=11, column=0, padx=20, pady=(20, 10))\nroot.exit = customtkinter.CTkButton(root.sidebar_frame, text=\"✖Exit\", anchor=tkinter.CENTER, command=exit)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.logo_label",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.logo_label = customtkinter.CTkLabel(root.sidebar_frame, text=\"Guess Number Game\", font=customtkinter.CTkFont(size=20, weight=\"bold\"))\nset_farsi_font_title(root.logo_label)\nroot.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))\nroot.logo_label = customtkinter.CTkLabel(root.sidebar_frame, text=\"Game By: Elyas Najafi\", font=customtkinter.CTkFont(size=2))\nset_farsi_font_title(root.logo_label)\nroot.logo_label.grid(row=11, column=0, padx=20, pady=(20, 10))\nroot.exit = customtkinter.CTkButton(root.sidebar_frame, text=\"✖Exit\", anchor=tkinter.CENTER, command=exit)\nset_farsi_font_text(root.exit)\nroot.exit.grid(row=10, column=0, padx=20, pady=(10, 20))\nroot.again = customtkinter.CTkButton(root.sidebar_frame, text=\"😓Try Again\", anchor=tkinter.CENTER, command=again)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.logo_label",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.logo_label = customtkinter.CTkLabel(root.sidebar_frame, text=\"Game By: Elyas Najafi\", font=customtkinter.CTkFont(size=2))\nset_farsi_font_title(root.logo_label)\nroot.logo_label.grid(row=11, column=0, padx=20, pady=(20, 10))\nroot.exit = customtkinter.CTkButton(root.sidebar_frame, text=\"✖Exit\", anchor=tkinter.CENTER, command=exit)\nset_farsi_font_text(root.exit)\nroot.exit.grid(row=10, column=0, padx=20, pady=(10, 20))\nroot.again = customtkinter.CTkButton(root.sidebar_frame, text=\"😓Try Again\", anchor=tkinter.CENTER, command=again)\nset_farsi_font_text(root.again)\nroot.again.grid(row=10, column=0, padx=20, pady=(10, 110))\nroot.Difficulty_label = customtkinter.CTkLabel(root.sidebar_frame, text=\"Max Try\", anchor=\"w\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.exit",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.exit = customtkinter.CTkButton(root.sidebar_frame, text=\"✖Exit\", anchor=tkinter.CENTER, command=exit)\nset_farsi_font_text(root.exit)\nroot.exit.grid(row=10, column=0, padx=20, pady=(10, 20))\nroot.again = customtkinter.CTkButton(root.sidebar_frame, text=\"😓Try Again\", anchor=tkinter.CENTER, command=again)\nset_farsi_font_text(root.again)\nroot.again.grid(row=10, column=0, padx=20, pady=(10, 110))\nroot.Difficulty_label = customtkinter.CTkLabel(root.sidebar_frame, text=\"Max Try\", anchor=\"w\")\nset_farsi_font_text(root.Difficulty_label)\nroot.Difficulty_label.grid(row=6, column=0, padx=20, pady=(10, 0))\nroot.Difficulty_optionemenu = customtkinter.CTkOptionMenu(root.sidebar_frame, values=[\"3\", \"5\", \"10\", \"15\",], command=changeMaxTry)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.again",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.again = customtkinter.CTkButton(root.sidebar_frame, text=\"😓Try Again\", anchor=tkinter.CENTER, command=again)\nset_farsi_font_text(root.again)\nroot.again.grid(row=10, column=0, padx=20, pady=(10, 110))\nroot.Difficulty_label = customtkinter.CTkLabel(root.sidebar_frame, text=\"Max Try\", anchor=\"w\")\nset_farsi_font_text(root.Difficulty_label)\nroot.Difficulty_label.grid(row=6, column=0, padx=20, pady=(10, 0))\nroot.Difficulty_optionemenu = customtkinter.CTkOptionMenu(root.sidebar_frame, values=[\"3\", \"5\", \"10\", \"15\",], command=changeMaxTry)\nroot.Difficulty_optionemenu.grid(row=7, column=0, padx=20, pady=(10, 20))\nroot.Difficulty_optionemenu.set(\"5\")\nroot.user_guess = tkinter.StringVar()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.Difficulty_label",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.Difficulty_label = customtkinter.CTkLabel(root.sidebar_frame, text=\"Max Try\", anchor=\"w\")\nset_farsi_font_text(root.Difficulty_label)\nroot.Difficulty_label.grid(row=6, column=0, padx=20, pady=(10, 0))\nroot.Difficulty_optionemenu = customtkinter.CTkOptionMenu(root.sidebar_frame, values=[\"3\", \"5\", \"10\", \"15\",], command=changeMaxTry)\nroot.Difficulty_optionemenu.grid(row=7, column=0, padx=20, pady=(10, 20))\nroot.Difficulty_optionemenu.set(\"5\")\nroot.user_guess = tkinter.StringVar()\nroot.te = customtkinter.CTkEntry(root, textvariable=root.user_guess)\nset_farsi_font_text(root.te)\nroot.te.grid(row=3, column=1, columnspan=2, padx=(20, 0), pady=(20, 20), sticky=\"nsew\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.Difficulty_optionemenu",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.Difficulty_optionemenu = customtkinter.CTkOptionMenu(root.sidebar_frame, values=[\"3\", \"5\", \"10\", \"15\",], command=changeMaxTry)\nroot.Difficulty_optionemenu.grid(row=7, column=0, padx=20, pady=(10, 20))\nroot.Difficulty_optionemenu.set(\"5\")\nroot.user_guess = tkinter.StringVar()\nroot.te = customtkinter.CTkEntry(root, textvariable=root.user_guess)\nset_farsi_font_text(root.te)\nroot.te.grid(row=3, column=1, columnspan=2, padx=(20, 0), pady=(20, 20), sticky=\"nsew\")\nroot.main_button_1 = customtkinter.CTkButton(master=root, fg_color=\"transparent\", border_width=2, text_color=(\"gray10\", \"#DCE4EE\"), text='GUESS', command=guessNumber)\nroot.te.bind(\"<Return>\", on_enter_pressed)\nset_farsi_font_text(root.main_button_1)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.user_guess",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.user_guess = tkinter.StringVar()\nroot.te = customtkinter.CTkEntry(root, textvariable=root.user_guess)\nset_farsi_font_text(root.te)\nroot.te.grid(row=3, column=1, columnspan=2, padx=(20, 0), pady=(20, 20), sticky=\"nsew\")\nroot.main_button_1 = customtkinter.CTkButton(master=root, fg_color=\"transparent\", border_width=2, text_color=(\"gray10\", \"#DCE4EE\"), text='GUESS', command=guessNumber)\nroot.te.bind(\"<Return>\", on_enter_pressed)\nset_farsi_font_text(root.main_button_1)\nroot.main_button_1.grid(row=3, column=3, padx=(20, 20), pady=(20, 20), sticky=\"nsew\")\nroot.textbox = customtkinter.CTkFrame(root, width=450)\nroot.textbox.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky=\"nsew\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.te",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.te = customtkinter.CTkEntry(root, textvariable=root.user_guess)\nset_farsi_font_text(root.te)\nroot.te.grid(row=3, column=1, columnspan=2, padx=(20, 0), pady=(20, 20), sticky=\"nsew\")\nroot.main_button_1 = customtkinter.CTkButton(master=root, fg_color=\"transparent\", border_width=2, text_color=(\"gray10\", \"#DCE4EE\"), text='GUESS', command=guessNumber)\nroot.te.bind(\"<Return>\", on_enter_pressed)\nset_farsi_font_text(root.main_button_1)\nroot.main_button_1.grid(row=3, column=3, padx=(20, 20), pady=(20, 20), sticky=\"nsew\")\nroot.textbox = customtkinter.CTkFrame(root, width=450)\nroot.textbox.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky=\"nsew\")\nroot.user_guess_lable = tkinter.StringVar()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.main_button_1",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.main_button_1 = customtkinter.CTkButton(master=root, fg_color=\"transparent\", border_width=2, text_color=(\"gray10\", \"#DCE4EE\"), text='GUESS', command=guessNumber)\nroot.te.bind(\"<Return>\", on_enter_pressed)\nset_farsi_font_text(root.main_button_1)\nroot.main_button_1.grid(row=3, column=3, padx=(20, 20), pady=(20, 20), sticky=\"nsew\")\nroot.textbox = customtkinter.CTkFrame(root, width=450)\nroot.textbox.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky=\"nsew\")\nroot.user_guess_lable = tkinter.StringVar()\nroot.user_guess_lable.set('Please Enter a Number Between 1 and 100')\nroot.label_user_guess = tkinter.Label(root, textvariable=root.user_guess_lable)\nset_farsi_font_text(root.label_user_guess)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.textbox",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.textbox = customtkinter.CTkFrame(root, width=450)\nroot.textbox.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky=\"nsew\")\nroot.user_guess_lable = tkinter.StringVar()\nroot.user_guess_lable.set('Please Enter a Number Between 1 and 100')\nroot.label_user_guess = tkinter.Label(root, textvariable=root.user_guess_lable)\nset_farsi_font_text(root.label_user_guess)\nroot.label_user_guess.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky=\"nsew\")\nroot.mainloop()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.user_guess_lable",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.user_guess_lable = tkinter.StringVar()\nroot.user_guess_lable.set('Please Enter a Number Between 1 and 100')\nroot.label_user_guess = tkinter.Label(root, textvariable=root.user_guess_lable)\nset_farsi_font_text(root.label_user_guess)\nroot.label_user_guess.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky=\"nsew\")\nroot.mainloop()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root.label_user_guess",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "root.label_user_guess = tkinter.Label(root, textvariable=root.user_guess_lable)\nset_farsi_font_text(root.label_user_guess)\nroot.label_user_guess.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky=\"nsew\")\nroot.mainloop()",
+        "detail": "app",
+        "documentation": {}
+    }
+]
